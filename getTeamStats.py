@@ -227,7 +227,7 @@ def main():
                 err = "Schedule data unavailable"
 
             # Step 2: get upcoming fixtures using scoreboard with future date ranges
-            # (MenuScores technique: scoreboard?dates=YYYYMMDD-YYYYMMDD)
+            
             if stats is not None and not stats["next5"]:
                 from datetime import timedelta
                 today = datetime.now()

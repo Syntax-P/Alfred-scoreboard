@@ -4,13 +4,15 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.scoreboard.football</string>
+	<key>category</key>
+	<string>Internet</string>
 	<key>connections</key>
 	<dict>
 		<key>HOTKEY-MAIN</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>SHOWALFRED-MAIN</string>
+				<string>SF-MENU</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -19,18 +21,34 @@
 				<false/>
 			</dict>
 		</array>
-		<key>SF-BUNDESLIGA</key>
+		<key>RUN-RELOAD</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>TEXTVIEW-STATS</string>
+				<string>NOTIF-RELOAD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>View team stats</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>SF-BUND</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>Open on ESPN</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>SF-BUNDESLIGATAB</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>OPENURL-MAIN</string>
@@ -38,6 +56,16 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Open in browser</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>TEXTVIEW-STATS</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>View team stats</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -59,6 +87,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in browser</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>TEXTVIEW-STATS</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -67,6 +105,9 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>SF-LALIGATABLE</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>OPENURL-MAIN</string>
@@ -77,8 +118,18 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>TEXTVIEW-STATS</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>View team stats</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
-		<key>SF-LALIGA</key>
+		<key>SF-LIGA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -91,30 +142,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>SF-LALIGATABL</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>TEXTVIEW-STATS</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string>View team stats</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>OPENURL-MAIN</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Open in browser</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>SF-LIGUE1</key>
+		<key>SF-LIGUE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -127,8 +155,18 @@
 				<false/>
 			</dict>
 		</array>
-		<key>SF-LIGUE1TABL</key>
+		<key>SF-LIGUE1TABLE</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in browser</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>TEXTVIEW-STATS</string>
@@ -139,13 +177,29 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>SF-MENU</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>OPENURL-MAIN</string>
+				<string>RUN-SEARCH</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Open in browser</string>
+				<string>Open in Alfred</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>SF-RELOAD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>RUN-RELOAD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -163,7 +217,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>SF-SERIEA</key>
+		<key>SF-SERIE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -176,18 +230,8 @@
 				<false/>
 			</dict>
 		</array>
-		<key>SF-SERIEASTAB</key>
+		<key>SF-SERIEASTABLE</key>
 		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>TEXTVIEW-STATS</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string>View team stats</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>OPENURL-MAIN</string>
@@ -198,10 +242,20 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>TEXTVIEW-STATS</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>View team stats</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>ScoreBoard</string>
+	<string>EAS</string>
 	<key>description</key>
 	<string>Live football scores and standings — EPL, Bundesliga, La Liga, Serie A, Ligue 1.</string>
 	<key>disabled</key>
@@ -213,16 +267,94 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/osascript -e "tell application \"Alfred 5\" to search \"$1\"" -- "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>RUN-SEARCH</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:keyword_scoreboard}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading leagues...</string>
+				<key>script</key>
+				<string>python3 ./menu.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>EPL · Bundesliga · La Liga · Serie A · Ligue 1  ·  ↩ scores  ⌘↩ table</string>
+				<key>title</key>
+				<string>ScoreBoard</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-MENU</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
-				<key>focusedAppEnabled</key>
-				<false/>
-				<key>hotmods</key>
+				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
 				<key>modsmode</key>
 				<integer>0</integer>
-				<key>passApplications</key>
-				<false/>
 				<key>relatedAppsMode</key>
 				<integer>0</integer>
 			</dict>
@@ -236,13 +368,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>arguments</key>
-				<string>scores</string>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.showalfred</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>SHOWALFRED-MAIN</string>
+			<string>OPENURL-MAIN</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -262,7 +402,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>scores</string>
+				<string>{var:keyword_scores}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -292,251 +432,6 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>SF-SCORES</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>epl</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching...</string>
-				<key>script</key>
-				<string>python3 ./scores.py ENG.1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Today&apos;s Premier League scores</string>
-				<key>title</key>
-				<string>Premier League</string>
-				<key>type</key>
-				<integer>5</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>SF-EPL</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>bundesliga</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching...</string>
-				<key>script</key>
-				<string>python3 ./scores.py GER.1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Today&apos;s Bundesliga scores</string>
-				<key>title</key>
-				<string>Bundesliga</string>
-				<key>type</key>
-				<integer>5</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>SF-BUNDESLIGA</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>laliga</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching...</string>
-				<key>script</key>
-				<string>python3 ./scores.py ESP.1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Today&apos;s La Liga scores</string>
-				<key>title</key>
-				<string>La Liga</string>
-				<key>type</key>
-				<integer>5</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>SF-LALIGA</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>seriea</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching...</string>
-				<key>script</key>
-				<string>python3 ./scores.py ITA.1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Today&apos;s Serie A scores</string>
-				<key>title</key>
-				<string>Serie A</string>
-				<key>type</key>
-				<integer>5</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>SF-SERIEA</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>ligue1</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching...</string>
-				<key>script</key>
-				<string>python3 ./scores.py FRA.1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Today&apos;s Ligue 1 scores</string>
-				<key>title</key>
-				<string>Ligue 1</string>
-				<key>type</key>
-				<integer>5</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>SF-LIGUE1</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -634,7 +529,138 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>SF-BUNDESLIGA</string>
+			<string>SF-BUNDESLIGATAB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>epl</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py ENG.1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Today's Premier League scores</string>
+				<key>title</key>
+				<string>Premier League</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-EPL</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>behaviour</key>
+				<integer>2</integer>
+				<key>fontmode</key>
+				<integer>0</integer>
+				<key>fontsizing</key>
+				<integer>0</integer>
+				<key>footertext</key>
+				<string></string>
+				<key>inputfile</key>
+				<string>getTeamStats.py</string>
+				<key>inputtype</key>
+				<integer>1</integer>
+				<key>loadingtext</key>
+				<string>Loading team stats...</string>
+				<key>outputmode</key>
+				<integer>0</integer>
+				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>spellchecking</key>
+				<integer>0</integer>
+				<key>stackview</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.userinterface.text</string>
+			<key>uid</key>
+			<string>TEXTVIEW-STATS</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>bundesliga</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py GER.1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Today's Bundesliga scores</string>
+				<key>title</key>
+				<string>Bundesliga</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-BUND</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -683,7 +709,56 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>SF-LALIGATABL</string>
+			<string>SF-LALIGATABLE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>laliga</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py ESP.1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Today's La Liga scores</string>
+				<key>title</key>
+				<string>La Liga</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-LIGA</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -732,7 +807,56 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>SF-SERIEASTAB</string>
+			<string>SF-SERIEASTABLE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>seriea</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py ITA.1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Today's Serie A scores</string>
+				<key>title</key>
+				<string>Serie A</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-SERIE</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -781,61 +905,149 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>SF-LIGUE1TABL</string>
+			<string>SF-LIGUE1TABLE</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>behaviour</key>
-				<integer>2</integer>
-				<key>fontmode</key>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
-				<key>fontsizing</key>
-				<integer>0</integer>
-				<key>footertext</key>
-				<string></string>
-				<key>inputfile</key>
-				<string>getTeamStats.py</string>
-				<key>inputtype</key>
-				<integer>1</integer>
-				<key>loadingtext</key>
-				<string>Loading team stats...</string>
-				<key>outputmode</key>
-				<integer>0</integer>
-				<key>scriptinput</key>
-				<integer>0</integer>
-				<key>spellchecking</key>
-				<integer>0</integer>
-				<key>stackview</key>
+				<key>argumenttreatemptyqueryasnil</key>
 				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ligue1</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py FRA.1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Today's Ligue 1 scores</string>
+				<key>title</key>
+				<string>Ligue 1</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.userinterface.text</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>TEXTVIEW-STATS</string>
+			<string>SF-LIGUE</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
+				<key>alfredfiltersresults</key>
 				<false/>
-				<key>skipvarencode</key>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>scores:reload</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Clearing cache...</string>
+				<key>script</key>
+				<string>python3 ./reload.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Clear cache and reload all data</string>
+				<key>title</key>
+				<string>Refresh ScoreBoard</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
 				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>OPENURL-MAIN</string>
+			<string>SF-RELOAD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python3 "$alfred_workflow_dir/reload.py"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>RUN-RELOAD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Cache cleared — data will refresh on next search</string>
+				<key>title</key>
+				<string>ScoreBoard Refreshed ✓</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>NOTIF-RELOAD</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -843,20 +1055,33 @@
 	<key>readme</key>
 	<string>## Usage
 
-Search live football scores across the top 5 European leagues via the `scores` keyword.
+Search live football scores across the top 5 European leagues via the `scoreboard` keyword.
+
+![ScoreBoard league picker](images/scoreboard.png)
+
+* &lt;kbd&gt;↩&lt;/kbd&gt; View today's scores for that league.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; View the league standings table.
+
+Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, or `ligue1` keywords.
+
+![Live scores with goal scorers](images/scores.png)
 
 * &lt;kbd&gt;↩&lt;/kbd&gt; Open the match on ESPN.
 
-Search scores for a specific league via dedicated keywords: `epl`, `bundesliga`, `laliga`, `seriea`, or `ligue1`.
+View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, or `ligue1table` keywords.
 
-* &lt;kbd&gt;↩&lt;/kbd&gt; Open the match on ESPN.
+![League table with next fixture](images/table.png)
 
-View current standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, or `ligue1table` keywords.
-
-* &lt;kbd&gt;↩&lt;/kbd&gt; View full team season stats, home/away splits, form guide, and next fixture.
+* &lt;kbd&gt;↩&lt;/kbd&gt; View full team stats — season overview, home/away splits, clean sheets, and next fixtures.
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open the team page in the browser.
 
-Set a favourite team in the Workflow&apos;s Configuration to highlight it with ★ in standings.
+![Team stats panel](images/stats.png)
+
+Clear the cache and force a fresh reload via the `scores:reload` keyword.
+
+Configure the Hotkey to open the `scoreboard` launcher instantly from anywhere.
+
+Set a favourite team and adjust the refresh interval in the Workflow's Configuration.
 </string>
 	<key>uidata</key>
 	<dict>
@@ -867,10 +1092,31 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
+		<key>NOTIF-RELOAD</key>
+		<dict>
+			<key>xpos</key>
+			<real>480</real>
+			<key>ypos</key>
+			<real>495</real>
+		</dict>
 		<key>OPENURL-MAIN</key>
 		<dict>
 			<key>xpos</key>
-			<real>490</real>
+			<real>480</real>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+		<key>RUN-RELOAD</key>
+		<dict>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>495</real>
+		</dict>
+		<key>RUN-SEARCH</key>
+		<dict>
+			<key>xpos</key>
+			<real>530</real>
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
@@ -881,16 +1127,7 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>294</real>
-		</dict>
-		<key>SF-BUNDESLIGA</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>1</integer>
-			<key>xpos</key>
-			<real>240</real>
-			<key>ypos</key>
-			<real>280</real>
+			<real>295</real>
 		</dict>
 		<key>SF-BUNDESLIGATAB</key>
 		<dict>
@@ -899,7 +1136,7 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>232</real>
+			<real>230</real>
 		</dict>
 		<key>SF-EPL</key>
 		<dict>
@@ -908,7 +1145,7 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>232</real>
+			<real>230</real>
 		</dict>
 		<key>SF-EPLTABLE</key>
 		<dict>
@@ -919,24 +1156,6 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>ypos</key>
 			<real>170</real>
 		</dict>
-		<key>SF-LALIGA</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>520</real>
-		</dict>
-		<key>SF-LALIGATABL</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>240</real>
-			<key>ypos</key>
-			<real>400</real>
-		</dict>
 		<key>SF-LALIGATABLE</key>
 		<dict>
 			<key>colorindex</key>
@@ -944,7 +1163,7 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>294</real>
+			<real>295</real>
 		</dict>
 		<key>SF-LIGA</key>
 		<dict>
@@ -953,7 +1172,7 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>356</real>
+			<real>355</real>
 		</dict>
 		<key>SF-LIGUE</key>
 		<dict>
@@ -964,24 +1183,6 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>ypos</key>
 			<real>480</real>
 		</dict>
-		<key>SF-LIGUE1</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>4</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>760</real>
-		</dict>
-		<key>SF-LIGUE1TABL</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>4</integer>
-			<key>xpos</key>
-			<real>240</real>
-			<key>ypos</key>
-			<real>640</real>
-		</dict>
 		<key>SF-LIGUE1TABLE</key>
 		<dict>
 			<key>colorindex</key>
@@ -989,7 +1190,23 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>418</real>
+			<real>420</real>
+		</dict>
+		<key>SF-MENU</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<real>185</real>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+		<key>SF-RELOAD</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>495</real>
 		</dict>
 		<key>SF-SCORES</key>
 		<dict>
@@ -1007,25 +1224,7 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>418</real>
-		</dict>
-		<key>SF-SERIEA</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>640</real>
-		</dict>
-		<key>SF-SERIEASTAB</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>240</real>
-			<key>ypos</key>
-			<real>520</real>
+			<real>420</real>
 		</dict>
 		<key>SF-SERIEASTABLE</key>
 		<dict>
@@ -1034,24 +1233,144 @@ Set a favourite team in the Workflow&apos;s Configuration to highlight it with �
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>356</real>
-		</dict>
-		<key>SHOWALFRED-MAIN</key>
-		<dict>
-			<key>xpos</key>
-			<real>185</real>
-			<key>ypos</key>
-			<real>20</real>
+			<real>355</real>
 		</dict>
 		<key>TEXTVIEW-STATS</key>
 		<dict>
 			<key>xpos</key>
-			<real>490</real>
+			<real>480</real>
 			<key>ypos</key>
-			<real>418</real>
+			<real>270</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>scoreboard</string>
+				<key>placeholder</key>
+				<string>scoreboard</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Keyword to open the ScoreBoard league picker.</string>
+			<key>label</key>
+			<string>Main keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword_scoreboard</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>scores</string>
+				<key>placeholder</key>
+				<string>scores</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Keyword to show all leagues at once.</string>
+			<key>label</key>
+			<string>All scores keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword_scores</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>e.g. Arsenal</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Your team's name (e.g. Arsenal). Marked with ★ in standings.</string>
+			<key>label</key>
+			<string>Favourite team</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>fav_team</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>defaultvalue</key>
+				<integer>60</integer>
+				<key>markercount</key>
+				<integer>4</integer>
+				<key>maxvalue</key>
+				<integer>300</integer>
+				<key>minvalue</key>
+				<integer>30</integer>
+				<key>onlystoponmarkers</key>
+				<true/>
+				<key>showmarkers</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>How often live scores refresh. Lower is faster but uses more data.</string>
+			<key>label</key>
+			<string>Score refresh (seconds)</string>
+			<key>type</key>
+			<string>slider</string>
+			<key>variable</key>
+			<string>score_refresh</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>1</string>
+				<key>placeholder</key>
+				<string>1</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Display goal scorers and card counts in score subtitles. Set to 1 (on) or 0 (off).</string>
+			<key>label</key>
+			<string>Show goals and cards</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>show_events</string>
+		</dict>
+	</array>
+	<key>variables</key>
+	<dict>
+		<key>fav_team</key>
+		<string></string>
+		<key>keyword_scoreboard</key>
+		<string>scoreboard</string>
+		<key>keyword_scores</key>
+		<string>scores</string>
+		<key>score_refresh</key>
+		<string>60</string>
+		<key>show_events</key>
+		<string>1</string>
+	</dict>
 	<key>version</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
+	<key>webaddress</key>
+	<string>https://github.com/Syntax-P/Alfred-scoreboard</string>
 </dict>
 </plist>

@@ -180,7 +180,7 @@ def find_entries(obj,depth=0):
 FAV = os.environ.get("fav_team","").strip().lower()
 
 def next_fixtures_from_scoreboard(slug):
-    """Build team_id → next fixture string using date-range scoreboard (MenuScores technique)."""
+    """Build team_id → next fixture string using date-range scoreboard ( technique)."""
     upcoming_map = {}
     try:
         from datetime import timedelta

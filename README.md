@@ -1,16 +1,29 @@
 ## Usage
 
-Search live football scores across the top 5 European leagues via the `scores` keyword.
+Search live football scores across the top 5 European leagues via the `scoreboard` keyword.
+
+![ScoreBoard league picker](images/scoreboard.png)
+
+* <kbd>↩</kbd> View today's scores for that league.
+* <kbd>⌘</kbd><kbd>↩</kbd> View the league standings table.
+
+Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, or `ligue1` keywords.
+
+![Live scores with goal scorers](images/scores.png)
 
 * <kbd>↩</kbd> Open the match on ESPN.
 
-Search scores for a specific league via dedicated keywords: `epl`, `bundesliga`, `laliga`, `seriea`, or `ligue1`.
+View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, or `ligue1table` keywords.
 
-* <kbd>↩</kbd> Open the match on ESPN.
+![League table with next fixture](images/table.png)
 
-View current standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, or `ligue1table` keywords.
-
-* <kbd>↩</kbd> View full team season stats, home/away splits, form guide, and next fixture.
+* <kbd>↩</kbd> View full team stats — season overview, home/away splits, clean sheets, and next fixtures.
 * <kbd>⌘</kbd><kbd>↩</kbd> Open the team page in the browser.
 
-Set a favourite team in the Workflow's Configuration to highlight it with ★ in standings.
+![Team stats panel](images/stats.png)
+
+Clear the cache and force a fresh reload via the `scores:reload` keyword.
+
+Configure the Hotkey to open the `scoreboard` launcher instantly from anywhere.
+
+Set a favourite team and adjust the refresh interval in the Workflow's Configuration.
