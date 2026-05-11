@@ -329,7 +329,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Today's Premier League scores</string>
+				<string>Today&apos;s Premier League scores</string>
 				<key>title</key>
 				<string>Premier League</string>
 				<key>type</key>
@@ -378,7 +378,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Today's Bundesliga scores</string>
+				<string>Today&apos;s Bundesliga scores</string>
 				<key>title</key>
 				<string>Bundesliga</string>
 				<key>type</key>
@@ -427,7 +427,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Today's La Liga scores</string>
+				<string>Today&apos;s La Liga scores</string>
 				<key>title</key>
 				<string>La Liga</string>
 				<key>type</key>
@@ -476,7 +476,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Today's Serie A scores</string>
+				<string>Today&apos;s Serie A scores</string>
 				<key>title</key>
 				<string>Serie A</string>
 				<key>type</key>
@@ -525,7 +525,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Today's Ligue 1 scores</string>
+				<string>Today&apos;s Ligue 1 scores</string>
 				<key>title</key>
 				<string>Ligue 1</string>
 				<key>type</key>
@@ -856,7 +856,7 @@ View current standings via the `epltable`, `bundesligatable`, `laligatable`, `se
 * &lt;kbd&gt;↩&lt;/kbd&gt; View full team season stats, home/away splits, form guide, and next fixture.
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open the team page in the browser.
 
-Set a favourite team in the Workflow's Configuration to highlight it with ★ in standings.
+Set a favourite team in the Workflow&apos;s Configuration to highlight it with ★ in standings.
 </string>
 	<key>uidata</key>
 	<dict>
@@ -1052,6 +1052,6 @@ Set a favourite team in the Workflow's Configuration to highlight it with ★ in
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>3.1</string>
+	<string>1.0</string>
 </dict>
 </plist>
