@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#ff4b00"/>
+  <text x="32" y="28" font-family="Arial Black,Arial" font-weight="900" font-size="15" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">LA</text>
+  <text x="32" y="46" font-family="Arial Black,Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">LIGA</text>
+</svg>
