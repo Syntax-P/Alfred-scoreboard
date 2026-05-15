@@ -1,19 +1,19 @@
 ## Usage
 
-Search live football scores across the top 5 European leagues via the `scoreboard` keyword.
+Search live football scores across the top European leagues via the `scoreboard` keyword.
 
 ![ScoreBoard league picker](images/scoreboard.png)
 
 * <kbd>↩</kbd> View today's scores for that league.
 * <kbd>⌘</kbd><kbd>↩</kbd> View the league standings table.
 
-Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, or `ligue1` keywords.
+Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, or `ligue1` `ucl`, or `uel` keywords.
 
 ![Live scores with goal scorers](images/scores.png)
 
 * <kbd>↩</kbd> Open the match on ESPN.
 
-View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, or `ligue1table` keywords.
+View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, or `ueltable` keywords.
 
 ![League table with next fixture](images/table.png)
 
