@@ -12,11 +12,13 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 LEAGUES = {
-    "ENG.1": ("Premier League",  "leagues/epl.svg"),
-    "GER.1": ("Bundesliga",      "leagues/bundesliga.svg"),
-    "ESP.1": ("La Liga",         "leagues/laliga.svg"),
-    "ITA.1": ("Serie A",         "leagues/seriea.svg"),
-    "FRA.1": ("Ligue 1",         "leagues/ligue1.svg"),
+    "ENG.1":   ("Premier League",   "leagues/epl.svg"),
+    "GER.1":   ("Bundesliga",       "leagues/bundesliga.svg"),
+    "ESP.1":   ("La Liga",          "leagues/laliga.svg"),
+    "ITA.1":   ("Serie A",          "leagues/seriea.svg"),
+    "FRA.1":   ("Ligue 1",          "leagues/ligue1.svg"),
+    "uefa.champions": ("Champions League", "leagues/ucl.svg"),
+    "uefa.europa":    ("Europa League",    "leagues/uel.svg"),
 }
 # Keyword → slug
 ALIASES = {
@@ -25,6 +27,8 @@ ALIASES = {
     "laliga":"ESP.1","la liga":"ESP.1","spain":"ESP.1","esp":"ESP.1","liga":"ESP.1",
     "seriea":"ITA.1","serie a":"ITA.1","italy":"ITA.1","ita":"ITA.1","serie":"ITA.1",
     "ligue1":"FRA.1","ligue 1":"FRA.1","france":"FRA.1","fra":"FRA.1","french":"FRA.1",
+    "ucl":"uefa.champions","champions":"uefa.champions","champions league":"uefa.champions","cl":"uefa.champions",
+    "uel":"uefa.europa","europa":"uefa.europa","europa league":"uefa.europa","el":"uefa.europa",
 }
 ALL_SLUGS = list(LEAGUES.keys())
 

@@ -11,7 +11,9 @@ LEAGUES = [
     ("GER.1", "Bundesliga",      "🇩🇪", "leagues/bundesliga.svg", "bundesliga", "bundesligatable"),
     ("ESP.1", "La Liga",         "🇪🇸", "leagues/laliga.svg",     "laliga",     "laligatable"),
     ("ITA.1", "Serie A",         "🇮🇹", "leagues/seriea.svg",     "seriea",     "serieastable"),
-    ("FRA.1", "Ligue 1",         "🇫🇷", "leagues/ligue1.svg",     "ligue1",     "ligue1table"),
+    ("FRA.1",   "Ligue 1",          "🇫🇷", "leagues/ligue1.svg", "ligue1", "ligue1table"),
+    ("UEFA.CL", "Champions League", "🏆", "leagues/ucl.svg",   "ucl",    "ucltable"),
+    ("UEFA.EL", "Europa League",    "🟠", "leagues/uel.svg",   "uel",    "ueltable"),
 ]
 
 q = (sys.argv[1].strip().lower() if len(sys.argv) > 1 else "")
