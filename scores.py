@@ -17,8 +17,9 @@ LEAGUES = {
     "ESP.1":   ("La Liga",          "leagues/laliga.svg"),
     "ITA.1":   ("Serie A",          "leagues/seriea.svg"),
     "FRA.1":   ("Ligue 1",          "leagues/ligue1.svg"),
-    "uefa.champions": ("Champions League", "leagues/ucl.svg"),
-    "uefa.europa":    ("Europa League",    "leagues/uel.svg"),
+    "uefa.champions":          ("Champions League",   "leagues/ucl.svg"),
+    "uefa.europa":             ("Europa League",      "leagues/uel.svg"),
+    "uefa.europa.conf":  ("Conference League",  "leagues/uecl.svg"),
 }
 # Keyword → slug
 ALIASES = {
@@ -29,6 +30,7 @@ ALIASES = {
     "ligue1":"FRA.1","ligue 1":"FRA.1","france":"FRA.1","fra":"FRA.1","french":"FRA.1",
     "ucl":"uefa.champions","champions":"uefa.champions","champions league":"uefa.champions","cl":"uefa.champions",
     "uel":"uefa.europa","europa":"uefa.europa","europa league":"uefa.europa","el":"uefa.europa",
+    "uecl":"uefa.europa.conf","conference":"uefa.europa.conf","conference league":"uefa.europa.conf","ecl":"uefa.europa.conf",
 }
 ALL_SLUGS = list(LEAGUES.keys())
 

@@ -14,6 +14,7 @@ LEAGUES = [
     ("FRA.1",   "Ligue 1",          "🇫🇷", "leagues/ligue1.svg", "ligue1", "ligue1table"),
     ("UEFA.CL", "Champions League", "🏆", "leagues/ucl.svg",   "ucl",    "ucltable"),
     ("UEFA.EL", "Europa League",    "🟠", "leagues/uel.svg",   "uel",    "ueltable"),
+    ("mlb",     "MLB",              "⚾", "leagues/mlb.svg",   "mlb",    "mlbstandings"),
 ]
 
 q = (sys.argv[1].strip().lower() if len(sys.argv) > 1 else "")

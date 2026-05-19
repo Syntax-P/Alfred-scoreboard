@@ -1,8 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#1a1a2e"/>
-  <circle cx="32" cy="32" r="20" fill="none" stroke="#ffffff" stroke-width="2.5"/>
-  <path d="M32 12 Q40 20 40 32 Q40 44 32 52 Q24 44 24 32 Q24 20 32 12Z" fill="none" stroke="#ffffff" stroke-width="2"/>
-  <line x1="12" y1="32" x2="52" y2="32" stroke="#ffffff" stroke-width="2"/>
-  <line x1="16" y1="20" x2="48" y2="20" stroke="#ffffff" stroke-width="1.5"/>
-  <line x1="16" y1="44" x2="48" y2="44" stroke="#ffffff" stroke-width="1.5"/>
+<svg width="100%" viewBox="0 0 680 720" role="img" xmlns="http://www.w3.org/2000/svg" style="">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Gold trophy cup</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">A gold trophy cup with handles, a stem, and a brown base</desc>
+  <defs>
+    <linearGradient id="cupGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c8860a"/>
+      <stop offset="20%" style="stop-color:#f5c842"/>
+      <stop offset="50%" style="stop-color:#ffe066"/>
+      <stop offset="80%" style="stop-color:#f5c842"/>
+      <stop offset="100%" style="stop-color:#c8860a"/>
+    </linearGradient>
+    <linearGradient id="handleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a06a00"/>
+      <stop offset="40%" style="stop-color:#d4980e"/>
+      <stop offset="100%" style="stop-color:#a06a00"/>
+    </linearGradient>
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6b3d00"/>
+      <stop offset="40%" style="stop-color:#a0600a"/>
+      <stop offset="100%" style="stop-color:#6b3d00"/>
+    </linearGradient>
+    <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b07800"/>
+      <stop offset="50%" style="stop-color:#e8b820"/>
+      <stop offset="100%" style="stop-color:#b07800"/>
+    </linearGradient>
+    <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8d0;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#ffe066;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left handle -->
+  <path d="M 255 220 C 210 215, 175 235, 168 265 C 160 298, 175 340, 215 355 C 230 361, 248 363, 258 358" fill="none" stroke="url(#handleGrad)" stroke-width="28" stroke-linecap="round" style="fill:none;color:rgb(251, 251, 254);stroke-width:28px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <path d="M 255 220 C 210 215, 175 235, 168 265 C 160 298, 175 340, 215 355 C 230 361, 248 363, 258 358" fill="none" stroke="#f0b820" stroke-width="14" stroke-linecap="round" style="fill:none;stroke:rgb(240, 184, 32);color:rgb(251, 251, 254);stroke-width:14px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Right handle -->
+  <path d="M 425 220 C 470 215, 505 235, 512 265 C 520 298, 505 340, 465 355 C 450 361, 432 363, 422 358" fill="none" stroke="url(#handleGrad)" stroke-width="28" stroke-linecap="round" style="fill:none;color:rgb(251, 251, 254);stroke-width:28px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <path d="M 425 220 C 470 215, 505 235, 512 265 C 520 298, 505 340, 465 355 C 450 361, 432 363, 422 358" fill="none" stroke="#f0b820" stroke-width="14" stroke-linecap="round" style="fill:none;stroke:rgb(240, 184, 32);color:rgb(251, 251, 254);stroke-width:14px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cup body -->
+  <path d="M 248 130 C 248 120, 432 120, 432 130 L 450 370 C 450 400, 340 420, 340 420 C 340 420, 230 400, 230 370 Z" fill="url(#cupGrad)" stroke="#c8860a" stroke-width="2" style="stroke:rgb(200, 134, 10);color:rgb(251, 251, 254);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cup rim at top -->
+  <ellipse cx="340" cy="130" rx="93" ry="18" fill="#f5c030" stroke="#c8860a" stroke-width="2" style="fill:rgb(245, 192, 48);stroke:rgb(200, 134, 10);color:rgb(251, 251, 254);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <ellipse cx="340" cy="130" rx="85" ry="12" fill="#ffe070" style="fill:rgb(255, 224, 112);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cup inner shadow at top opening -->
+  <ellipse cx="340" cy="130" rx="70" ry="8" fill="#c8860a" opacity="0.35" style="fill:rgb(200, 134, 10);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.35;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shine on cup body -->
+  <path d="M 272 145 C 272 145, 295 160, 298 280 C 298 300, 285 330, 268 350" fill="none" stroke="#fff8d0" stroke-width="14" stroke-linecap="round" opacity="0.45" style="fill:none;stroke:rgb(255, 248, 208);color:rgb(251, 251, 254);stroke-width:14px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.45;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <path d="M 285 140 C 285 140, 303 155, 305 260" fill="none" stroke="#fffbe0" stroke-width="5" stroke-linecap="round" opacity="0.5" style="fill:none;stroke:rgb(255, 251, 224);color:rgb(251, 251, 254);stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cup bottom transition to stem -->
+  <ellipse cx="340" cy="415" rx="55" ry="14" fill="#d4980e" stroke="#a06a00" stroke-width="1.5" style="fill:rgb(212, 152, 14);stroke:rgb(160, 106, 0);color:rgb(251, 251, 254);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Stem -->
+  <rect x="316" y="414" width="48" height="80" rx="6" fill="url(#stemGrad)" stroke="#a06a00" stroke-width="1.5" style="stroke:rgb(160, 106, 0);color:rgb(251, 251, 254);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="326" y="416" width="20" height="76" rx="4" fill="#f0c030" opacity="0.4" style="fill:rgb(240, 192, 48);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Base platform top -->
+  <rect x="255" y="490" width="170" height="22" rx="8" fill="url(#baseGrad)" stroke="#6b3d00" stroke-width="1.5" style="stroke:rgb(107, 61, 0);color:rgb(251, 251, 254);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- Base platform middle -->
+  <rect x="265" y="508" width="150" height="16" rx="6" fill="#8b4f00" stroke="#6b3d00" stroke-width="1.5" style="fill:rgb(139, 79, 0);stroke:rgb(107, 61, 0);color:rgb(251, 251, 254);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- Base platform bottom -->
+  <rect x="255" y="520" width="170" height="20" rx="8" fill="url(#baseGrad)" stroke="#6b3d00" stroke-width="1.5" style="stroke:rgb(107, 61, 0);color:rgb(251, 251, 254);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shine on base -->
+  <rect x="270" y="493" width="60" height="6" rx="3" fill="#d4920e" opacity="0.4" style="fill:rgb(212, 146, 14);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
 </svg>

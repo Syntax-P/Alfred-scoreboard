@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.scoreboard.football</string>
-	<key>category</key>
-	<string>Internet</string>
 	<key>connections</key>
 	<dict>
 		<key>HOTKEY-MAIN</key>
@@ -191,6 +189,42 @@
 				<false/>
 			</dict>
 		</array>
+		<key>SF-MLB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>Open on ESPN</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>SF-MLBT</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in browser</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>TEXTVIEW-MLB-STATS</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>View team stats</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>SF-RELOAD</key>
 		<array>
 			<dict>
@@ -289,6 +323,42 @@
 				<false/>
 			</dict>
 		</array>
+		<key>SF-UECL</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>Open on ESPN</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>SF-UECLT</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in browser</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>TEXTVIEW-STATS</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>View team stats</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>SF-UEL</key>
 		<array>
 			<dict>
@@ -336,6 +406,104 @@
 	<string>ScoreBoard</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>uecl</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py uefa.europa.conf</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Today's Conference League scores</string>
+				<key>title</key>
+				<string>Conference League</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-UECL</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>uecltable</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py uefa.europa.conf table</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>↩ team stats  ·  ⌘↩ open in browser</string>
+				<key>title</key>
+				<string>Conference League Table</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-UECLT</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -657,39 +825,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>behaviour</key>
-				<integer>2</integer>
-				<key>fontmode</key>
-				<integer>0</integer>
-				<key>fontsizing</key>
-				<integer>0</integer>
-				<key>footertext</key>
-				<string></string>
-				<key>inputfile</key>
-				<string>getTeamStats.py</string>
-				<key>inputtype</key>
-				<integer>1</integer>
-				<key>loadingtext</key>
-				<string>Loading team stats...</string>
-				<key>outputmode</key>
-				<integer>0</integer>
-				<key>scriptinput</key>
-				<integer>0</integer>
-				<key>spellchecking</key>
-				<integer>0</integer>
-				<key>stackview</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.userinterface.text</string>
-			<key>uid</key>
-			<string>TEXTVIEW-STATS</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -784,6 +919,39 @@
 			<string>SF-BUND</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>behaviour</key>
+				<integer>2</integer>
+				<key>fontmode</key>
+				<integer>0</integer>
+				<key>fontsizing</key>
+				<integer>0</integer>
+				<key>footertext</key>
+				<string></string>
+				<key>inputfile</key>
+				<string>getTeamStats.py</string>
+				<key>inputtype</key>
+				<integer>1</integer>
+				<key>loadingtext</key>
+				<string>Loading team stats...</string>
+				<key>outputmode</key>
+				<integer>0</integer>
+				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>spellchecking</key>
+				<integer>0</integer>
+				<key>stackview</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.userinterface.text</string>
+			<key>uid</key>
+			<string>TEXTVIEW-STATS</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1319,6 +1487,137 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>mlbstandings</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./mlb.py standings</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>↩ team stats  ·  ⌘↩ open in browser</string>
+				<key>title</key>
+				<string>MLB Standings</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-MLBT</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>behaviour</key>
+				<integer>2</integer>
+				<key>fontmode</key>
+				<integer>0</integer>
+				<key>fontsizing</key>
+				<integer>0</integer>
+				<key>footertext</key>
+				<string></string>
+				<key>inputfile</key>
+				<string>getMLBTeamStats.py</string>
+				<key>inputtype</key>
+				<integer>1</integer>
+				<key>loadingtext</key>
+				<string>Loading team stats...</string>
+				<key>outputmode</key>
+				<integer>0</integer>
+				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>spellchecking</key>
+				<integer>0</integer>
+				<key>stackview</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.userinterface.text</string>
+			<key>uid</key>
+			<string>TEXTVIEW-MLB-STATS</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>mlb</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./mlb.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Today's MLB scores</string>
+				<key>title</key>
+				<string>MLB</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-MLB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>## Usage
@@ -1362,16 +1661,16 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 		<key>NOTIF-RELOAD</key>
 		<dict>
 			<key>xpos</key>
-			<real>480</real>
+			<real>650</real>
 			<key>ypos</key>
 			<real>495</real>
 		</dict>
 		<key>OPENURL-MAIN</key>
 		<dict>
 			<key>xpos</key>
-			<real>480</real>
+			<real>560</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>135</real>
 		</dict>
 		<key>RUN-RELOAD</key>
 		<dict>
@@ -1383,7 +1682,7 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 		<key>RUN-SEARCH</key>
 		<dict>
 			<key>xpos</key>
-			<real>530</real>
+			<real>560</real>
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
@@ -1468,6 +1767,24 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
+		<key>SF-MLB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>705</real>
+		</dict>
+		<key>SF-MLBT</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>655</real>
+		</dict>
 		<key>SF-RELOAD</key>
 		<dict>
 			<key>xpos</key>
@@ -1520,6 +1837,20 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 			<key>ypos</key>
 			<real>480</real>
 		</dict>
+		<key>SF-UECL</key>
+		<dict>
+			<key>xpos</key>
+			<real>305</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>SF-UECLT</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
 		<key>SF-UEL</key>
 		<dict>
 			<key>colorindex</key>
@@ -1536,14 +1867,21 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>560</real>
+		</dict>
+		<key>TEXTVIEW-MLB-STATS</key>
+		<dict>
+			<key>xpos</key>
+			<real>650</real>
+			<key>ypos</key>
+			<real>655</real>
 		</dict>
 		<key>TEXTVIEW-STATS</key>
 		<dict>
 			<key>xpos</key>
-			<real>480</real>
+			<real>650</real>
 			<key>ypos</key>
-			<real>270</real>
+			<real>330</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -1674,7 +2012,7 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/Syntax-P/Alfred-scoreboard</string>
 </dict>
