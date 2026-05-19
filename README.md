@@ -1,3 +1,9 @@
+# ScoreBoard
+
+A live sports scores, standings and stats workflow for Alfred.
+
+[![Download](https://img.shields.io/github/v/release/Syntax-P/Alfred-scoreboard?label=Download&color=blue)](https://github.com/Syntax-P/Alfred-scoreboard/releases/latest)
+
 ## Usage
 
 Search live scores across the top European football leagues and MLB via the `scoreboard` keyword.
