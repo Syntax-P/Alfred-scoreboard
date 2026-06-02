@@ -14,6 +14,9 @@ Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `la
 
 View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, `ueltable`, `uecltable`, `mlbstandings`, or `worldcuptable` keywords.
 
+<img src="images/table.png" width="49%"> <img src="images/stats.png" width="49%">
+<img src="images/scoreboard.png" width="49%"> <img src="images/scores.png" width="49%">
+
 * <kbd>↩</kbd> View full team stats — season record, home/away splits, and next fixtures.
 * <kbd>⌘</kbd><kbd>↩</kbd> Open the team page in the browser.
 
