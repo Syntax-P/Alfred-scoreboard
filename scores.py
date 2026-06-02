@@ -20,6 +20,7 @@ LEAGUES = {
     "uefa.champions":          ("Champions League",   "leagues/ucl.svg"),
     "uefa.europa":             ("Europa League",      "leagues/uel.svg"),
     "uefa.europa.conf":  ("Conference League",  "leagues/uecl.svg"),
+    "fifa.world":              ("FIFA World Cup",     "leagues/worldcup.svg"),
 }
 # Keyword → slug
 ALIASES = {
@@ -31,6 +32,7 @@ ALIASES = {
     "ucl":"uefa.champions","champions":"uefa.champions","champions league":"uefa.champions","cl":"uefa.champions",
     "uel":"uefa.europa","europa":"uefa.europa","europa league":"uefa.europa","el":"uefa.europa",
     "uecl":"uefa.europa.conf","conference":"uefa.europa.conf","conference league":"uefa.europa.conf","ecl":"uefa.europa.conf",
+    "worldcup":"fifa.world","world cup":"fifa.world","wc":"fifa.world","fifa":"fifa.world","world":"fifa.world",
 }
 ALL_SLUGS = list(LEAGUES.keys())
 
@@ -114,6 +116,20 @@ def local_time(s):
         return dt.astimezone().strftime("%-I:%M %p")
     except: return s
 
+def local_datetime(s):
+    try:
+        dt=datetime.fromisoformat(s.replace("Z","+00:00"))
+        local=dt.astimezone()
+        today=datetime.now().astimezone().date()
+        tomorrow=(datetime.now().astimezone()+__import__('datetime').timedelta(days=1)).date()
+        if local.date()==today:
+            return f"Today  ·  {local.strftime('%-I:%M %p')}"
+        elif local.date()==tomorrow:
+            return f"Tomorrow  ·  {local.strftime('%-I:%M %p')}"
+        else:
+            return local.strftime("%a %d %b  ·  %-I:%M %p")
+    except: return s
+
 def game_link(e):
     for lk in e.get("links",[]):
         if not lk.get("isExternal",True): return lk["href"]
@@ -130,7 +146,7 @@ def make_score_item(event,lname,licon):
                 t=c.get("team",{}); return t.get("abbreviation") or t.get("shortDisplayName") or t.get("name","?")
             hn,an=nm(hc),nm(ac); hs,as_=hc.get("score",""),ac.get("score","")
             icon=home_icon(hc.get("team",{}),licon); ev=events_str(comp)
-            if st=="pre":   title=f"{sicon}  {hn}  vs  {an}"; sub=f"{lname}  ·  {local_time(event.get('date',''))}"
+            if st=="pre":   title=f"{sicon}  {hn}  vs  {an}"; sub=f"{lname}  ·  {local_datetime(event.get('date',''))}"
             elif st=="in":  title=f"{sicon}  {hn}  {hs}  –  {an}  {as_}"; sub=f"{lname}  ·  {det}"; sub+=(f"  |  {ev}" if ev else "")
             else:
                 winner=next((nm(c) for c in cs if c.get("winner")),None)
@@ -268,6 +284,92 @@ def fetch_standings(slug):
         except: continue
     return items or [{"title":f"No standings for {ln}","valid":False,"icon":{"path":li}}]
 
+def fetch_worldcup_standings():
+    """World Cup standings — group stage shows group tables, knockout shows fixtures."""
+    slug = "fifa.world"
+    ln, li = LEAGUES[slug]
+
+    # Try to get standings data first to detect stage
+    data = None
+    for url in [f"https://site.api.espn.com/apis/v2/sports/soccer/{slug}/standings",
+                f"{ESPN_SOCCER}/{slug}/standings"]:
+        try: data, _ = fetch_json(url, f"standings_{slug}", STANDING_TTL); break
+        except: continue
+
+    # If we have standings data with groups → group stage
+    if data:
+        groups = []
+        def walk(obj):
+            if isinstance(obj, dict):
+                name  = obj.get("name","") or obj.get("abbreviation","")
+                sdata = obj.get("standings",{})
+                if sdata and sdata.get("entries") and name:
+                    groups.append((name, sdata["entries"]))
+                for child in (obj.get("children") or []):
+                    walk(child)
+            elif isinstance(obj, list):
+                for item in obj: walk(item)
+        walk(data)
+
+        if groups:
+            next_map = next_fixtures_from_scoreboard(slug)
+            items = []
+            for group_name, entries in groups:
+                # Group header
+                items.append({"title": f"── {group_name} ──", "subtitle": "",
+                              "valid": False, "icon": {"path": li}})
+                for entry in entries:
+                    try:
+                        team     = entry.get("team", {})
+                        tname    = team.get("displayName") or team.get("name", "?")
+                        tid      = team.get("id", "")
+                        logos    = team.get("logos") or []
+                        logo_url = logos[0].get("href","") if isinstance(logos,list) and logos else team.get("logo","")
+                        sv = {}
+                        for s in entry.get("stats", []):
+                            sv[s.get("name","") or s.get("abbreviation","")]= \
+                                s.get("displayValue","") or str(int(s.get("value",0)) if isinstance(s.get("value"),float) else "")
+                        def g(*keys):
+                            for k in keys:
+                                if k in sv: return sv[k]
+                            return "0"
+                        rank = int(float(g("rank","standing","rankTeam") or 0))
+                        pts  = g("points","PTS","pts")
+                        gp   = g("gamesPlayed","GP","played")
+                        w    = g("wins","W"); d=g("draws","ties","D","T"); l=g("losses","L")
+                        gf   = g("pointsFor","goalsFor","GF"); ga=g("pointsAgainst","goalsAgainst","GA")
+                        gd_v = g("pointDifferential","goalDifference","GD","diff")
+                        try: gd_i=int(float(gd_v)); gd_str=f"+{gd_i}" if gd_i>0 else str(gd_i)
+                        except: gd_str=str(gd_v)
+                        star = "  ★" if FAV and FAV in tname.lower() else ""
+                        title = f"{rank}.  {tname}{star}"
+                        next_str = next_map.get(str(tid), "")
+                        sub = f"Pts {pts}  ·  {gp} played  ·  W{w} D{d} L{l}  ·  GD {gd_str}  ·  {gf}:{ga}"
+                        if next_str: sub += f"  |  {next_str}"
+                        link = next((lk.get("href","") for lk in (team.get("links") or []) if not lk.get("isExternal",True)),"https://www.espn.com/soccer/")
+                        icon = download_logo(logo_url, tid) or li
+                        items.append({"title": title, "subtitle": sub, "arg": link,
+                                      "valid": True, "icon": {"path": icon},
+                                      "variables": {"teamId": tid, "teamName": tname,
+                                                    "slug": slug, "leagueName": ln,
+                                                    "pts": pts, "gp": gp, "w": w, "d": d,
+                                                    "l": l, "gf": gf, "ga": ga, "gd": gd_str,
+                                                    "rank": str(rank)}})
+                    except: continue
+            if items:
+                return items
+
+    # Knockout stage (or no standings) → show current/upcoming fixtures
+    items = fetch_scores(slug)
+    if not items:
+        items = [{"title": "No World Cup data available", "subtitle": "Check back during the tournament",
+                  "valid": False, "icon": {"path": li}}]
+    else:
+        # Prepend a header so user knows why they're seeing scores not a table
+        items.insert(0, {"title": "── Knockout Stage ──", "subtitle": "Group stage has ended — showing current fixtures",
+                         "valid": False, "icon": {"path": li}})
+    return items
+
 # ── League picker (shown when `table` is typed with no arg) ───────────────────
 def league_picker():
     return {"items":[
@@ -292,7 +394,10 @@ def main():
         table = len(args) >= 2 and args[1].lower() == "table"
 
         if table and slug:
-            items = fetch_standings(slug)
+            if slug == "fifa.world":
+                items = fetch_worldcup_standings()
+            else:
+                items = fetch_standings(slug)
         elif slug:
             items = all_scores([slug])
         else:
