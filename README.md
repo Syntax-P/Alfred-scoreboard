@@ -10,7 +10,6 @@ Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `la
 <img src="images/epl.png" width="49%"> <img src="images/worldcup.png" width="49%">
 <img src="images/laliga.png" width="49%"> <img src="images/mlb.png" width="49%">
 
-* <kbd>↩</kbd> Open the match on ESPN.
 
 View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, `ueltable`, `uecltable`, `mlbstandings`, or `worldcuptable` keywords.
 
