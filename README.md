@@ -1,6 +1,6 @@
 ## Usage
 
-Search live scores across the top European football leagues, MLB, and the FIFA World Cup via the `scoreboard` keyword.
+Search for live scores across the top European football leagues, MLB, and the FIFA World Cup via the `scoreboard` keyword.
 
 * <kbd>↩</kbd> View today's scores for that league.
 * <kbd>⌘</kbd><kbd>↩</kbd> View the league standings table.
