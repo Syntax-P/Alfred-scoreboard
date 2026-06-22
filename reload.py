@@ -19,11 +19,17 @@ for pattern in ["scores_*.json", "standings_*.json", "sched_*.json",
             removed += 1
         except: pass
 
-# Output for Alfred Post Notification
+# Output in Script Filter format with variables for notification
 print(json.dumps({
-    "alfredworkflow": {
+    "variables": {
+        "notification_title": "ScoreBoard Refreshed",
+        "notification_text":  "Cache cleared — scores will reload fresh"
+    },
+    "items": [{
+        "title":    "Cache Cleared",
+        "subtitle": f"Removed {removed} cached files — scores will reload fresh",
+        "valid":    True,
         "arg":      f"Cleared {removed} cached files",
-        "variables": {"notification_title": "ScoreBoard Refreshed",
-                      "notification_text":  f"Cache cleared — scores will reload fresh"}
-    }
+        "icon":     {"path": "icon.png"}
+    }]
 }))
