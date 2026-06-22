@@ -458,7 +458,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>worldcup</string>
+				<string>wc</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -507,7 +507,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>worldcuptable</string>
+				<string>wct</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -649,10 +649,6 @@
 				<false/>
 				<key>focusedappvariablename</key>
 				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -1756,16 +1752,14 @@
 	<key>readme</key>
 	<string>## Usage
 
-Search live scores across the top European football leagues and MLB via the `scoreboard` keyword.
+Search live scores across the top European football leagues, MLB, and the FIFA World Cup via the `scoreboard` keyword.
 
-* &lt;kbd&gt;↩&lt;/kbd&gt; View today's scores for that league.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; View the league standings table.
 
-Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, `ligue1`, `ucl`, `uel`, `uecl`, or `mlb` keywords.
+Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, `ligue1`, `ucl`, `uel`, `uecl`, `mlb`, or `worldcup` keywords.
 
-* &lt;kbd&gt;↩&lt;/kbd&gt; Open the match on ESPN.
 
-View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, `ueltable`, `uecltable`, or `mlbstandings` keywords.
+View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, `ueltable`, `uecltable`, `mlbstandings`, or `worldcuptable` keywords.
+
 
 * &lt;kbd&gt;↩&lt;/kbd&gt; View full team stats — season record, home/away splits, and next fixtures.
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open the team page in the browser.
@@ -1973,7 +1967,7 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 		<key>SF-UECLT</key>
 		<dict>
 			<key>xpos</key>
-			<real>300</real>
+			<real>305</real>
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
@@ -2152,7 +2146,7 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.3</string>
+	<string>1.0.4</string>
 	<key>webaddress</key>
 	<string>https://github.com/Syntax-P/Alfred-scoreboard</string>
 </dict>

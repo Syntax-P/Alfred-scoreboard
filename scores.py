@@ -32,7 +32,7 @@ ALIASES = {
     "ucl":"uefa.champions","champions":"uefa.champions","champions league":"uefa.champions","cl":"uefa.champions",
     "uel":"uefa.europa","europa":"uefa.europa","europa league":"uefa.europa","el":"uefa.europa",
     "uecl":"uefa.europa.conf","conference":"uefa.europa.conf","conference league":"uefa.europa.conf","ecl":"uefa.europa.conf",
-    "worldcup":"fifa.world","world cup":"fifa.world","wc":"fifa.world","fifa":"fifa.world","world":"fifa.world",
+    "wc":"fifa.world","worldcup":"fifa.world","world cup":"fifa.world","world":"fifa.world","fifa":"fifa.world",
 }
 ALL_SLUGS = list(LEAGUES.keys())
 
@@ -315,10 +315,19 @@ def fetch_worldcup_standings():
             next_map = next_fixtures_from_scoreboard(slug)
             items = []
             for group_name, entries in groups:
-                # Group header
-                items.append({"title": f"── {group_name} ──", "subtitle": "",
+                # Group header — non-empty subtitle prevents Alfred fallback text
+                items.append({"title": f"── {group_name} ──", "subtitle": "Group Stage",
                               "valid": False, "icon": {"path": li}})
-                for entry in entries:
+                # Sort entries by rank within group
+                def rank_of(entry):
+                    sv = {s.get("name","") or s.get("abbreviation",""): s.get("value",99)
+                          for s in entry.get("stats",[])}
+                    for k in ("rank","standing","rankTeam"):
+                        if k in sv:
+                            try: return int(float(sv[k]))
+                            except: pass
+                    return 99
+                for entry in sorted(entries, key=rank_of):
                     try:
                         team     = entry.get("team", {})
                         tname    = team.get("displayName") or team.get("name", "?")
