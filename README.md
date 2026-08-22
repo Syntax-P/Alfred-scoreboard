@@ -1,17 +1,18 @@
 ## Usage
 
-Search for live scores across the top European football leagues, MLB, and the FIFA World Cup via the `scoreboard` keyword.
+Search live scores across the top European football leagues and MLB via the `scoreboard` keyword.
 
 * <kbd>↩</kbd> View today's scores for that league.
 * <kbd>⌘</kbd><kbd>↩</kbd> View the league standings table.
 
-Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, `ligue1`, `ucl`, `uel`, `uecl`, `mlb`, or `wc` keywords.
+Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, `ligue1`, `ucl`, `uel`, `uecl`, `superlig`, or `mlb` keywords.
 
-<img src="images/epl.png" width="49%"> <img src="images/worldcup.png" width="49%">
-<img src="images/laliga.png" width="49%"> <img src="images/mlb.png" width="49%">
+<img src="images/epl.png" width="49%"> <img src="images/laliga.png" width="49%">
+<img src="images/mlb.png" width="49%"> <img src="images/scores.png" width="49%">
 
+* <kbd>↩</kbd> Open the match on ESPN.
 
-View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, `ueltable`, `uecltable`, `mlbstandings`, or `wct` keywords.
+View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, `ueltable`, `uecltable`, `superligtable`, or `mlbstandings` keywords.
 
 <img src="images/table.png" width="49%"> <img src="images/stats.png" width="49%">
 <img src="images/scoreboard.png" width="49%"> <img src="images/scores.png" width="49%">
