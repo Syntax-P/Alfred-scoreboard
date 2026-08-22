@@ -287,6 +287,42 @@
 				<false/>
 			</dict>
 		</array>
+		<key>SF-SUPERLIG</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>Open on ESPN</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>SF-SUPERLIGT</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>TEXTVIEW-STATS</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string>View team stats</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>OPENURL-MAIN</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in browser</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>SF-UCL</key>
 		<array>
 			<dict>
@@ -395,42 +431,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>SF-WC</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>OPENURL-MAIN</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string>Open on ESPN</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>SF-WCT</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>OPENURL-MAIN</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Open in browser</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>TEXTVIEW-STATS</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string>View team stats</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 	</dict>
 	<key>createdby</key>
 	<string>EAS</string>
@@ -442,104 +442,6 @@
 	<string>ScoreBoard</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>wc</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching...</string>
-				<key>script</key>
-				<string>python3 ./scores.py fifa.world</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Today's World Cup scores</string>
-				<key>title</key>
-				<string>FIFA World Cup</string>
-				<key>type</key>
-				<integer>5</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>SF-WC</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>wct</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching...</string>
-				<key>script</key>
-				<string>python3 ./scores.py fifa.world table</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>↩ team stats  ·  ⌘↩ open in browser</string>
-				<key>title</key>
-				<string>World Cup Table</string>
-				<key>type</key>
-				<integer>5</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>SF-WCT</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -649,6 +551,10 @@
 				<false/>
 				<key>focusedappvariablename</key>
 				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -1748,6 +1654,104 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>superlig</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py TUR.1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Today's Süper Lig scores</string>
+				<key>title</key>
+				<string>Süper Lig</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-SUPERLIG</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>superligtable</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching...</string>
+				<key>script</key>
+				<string>python3 ./scores.py TUR.1 table</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>↩ team stats  ·  ⌘↩ open in browser</string>
+				<key>title</key>
+				<string>Süper Lig Table</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>SF-SUPERLIGT</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>## Usage
@@ -1755,10 +1759,10 @@
 Search live scores across the top European football leagues, MLB, and the FIFA World Cup via the `scoreboard` keyword.
 
 
-Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, `ligue1`, `ucl`, `uel`, `uecl`, `mlb`, or `worldcup` keywords.
+Alternatively, search scores directly via the `scores`, `epl`, `bundesliga`, `laliga`, `seriea`, `ligue1`, `ucl`, `uel`, `uecl`, `mlb`, or `wc` keywords.
 
 
-View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, `ueltable`, `uecltable`, `mlbstandings`, or `worldcuptable` keywords.
+View standings via the `epltable`, `bundesligatable`, `laligatable`, `serieastable`, `ligue1table`, `ucltable`, `ueltable`, `uecltable`, `mlbstandings`, or `wct` keywords.
 
 
 * &lt;kbd&gt;↩&lt;/kbd&gt; View full team stats — season record, home/away splits, and next fixtures.
@@ -1774,248 +1778,248 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 		<key>HOTKEY-MAIN</key>
 		<dict>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>20.0</real>
 		</dict>
 		<key>NOTIF-RELOAD</key>
 		<dict>
 			<key>xpos</key>
-			<real>650</real>
+			<real>650.0</real>
 			<key>ypos</key>
-			<real>495</real>
+			<real>495.0</real>
 		</dict>
 		<key>OPENURL-MAIN</key>
 		<dict>
 			<key>xpos</key>
-			<real>560</real>
+			<real>560.0</real>
 			<key>ypos</key>
-			<real>135</real>
+			<real>135.0</real>
 		</dict>
 		<key>RUN-RELOAD</key>
 		<dict>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>495</real>
+			<real>495.0</real>
 		</dict>
 		<key>RUN-SEARCH</key>
 		<dict>
 			<key>xpos</key>
-			<real>560</real>
+			<real>560.0</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>20.0</real>
 		</dict>
 		<key>SF-BUND</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>295</real>
+			<real>295.0</real>
 		</dict>
 		<key>SF-BUNDESLIGATAB</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>230</real>
+			<real>230.0</real>
 		</dict>
 		<key>SF-EPL</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>230</real>
+			<real>230.0</real>
 		</dict>
 		<key>SF-EPLTABLE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>170</real>
+			<real>170.0</real>
 		</dict>
 		<key>SF-LALIGATABLE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>295</real>
+			<real>295.0</real>
 		</dict>
 		<key>SF-LIGA</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>355</real>
+			<real>355.0</real>
 		</dict>
 		<key>SF-LIGUE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>4</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>480</real>
+			<real>480.0</real>
 		</dict>
 		<key>SF-LIGUE1TABLE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>4</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>420.0</real>
 		</dict>
 		<key>SF-MENU</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>185</real>
+			<real>185.0</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>20.0</real>
 		</dict>
 		<key>SF-MLB</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>705</real>
+			<real>705.0</real>
 		</dict>
 		<key>SF-MLBT</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>655</real>
+			<real>655.0</real>
 		</dict>
 		<key>SF-RELOAD</key>
 		<dict>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>495</real>
+			<real>495.0</real>
 		</dict>
 		<key>SF-SCORES</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>170</real>
+			<real>170.0</real>
 		</dict>
 		<key>SF-SERIE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>420.0</real>
 		</dict>
 		<key>SF-SERIEASTABLE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>355</real>
+			<real>355.0</real>
 		</dict>
 		<key>SF-UCL</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>540</real>
+			<real>540.0</real>
 		</dict>
 		<key>SF-UCLT</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>480</real>
+			<real>480.0</real>
 		</dict>
 		<key>SF-UECL</key>
 		<dict>
 			<key>xpos</key>
-			<real>305</real>
+			<real>305.0</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>15.0</real>
 		</dict>
 		<key>SF-UECLT</key>
 		<dict>
 			<key>xpos</key>
-			<real>305</real>
+			<real>305.0</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>15.0</real>
 		</dict>
 		<key>SF-UEL</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>605</real>
+			<real>605.0</real>
 		</dict>
 		<key>SF-UELT</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>255.0</real>
 			<key>ypos</key>
-			<real>560</real>
+			<real>560.0</real>
 		</dict>
 		<key>SF-WC</key>
 		<dict>
 			<key>xpos</key>
-			<real>300</real>
+			<real>300.0</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>15.0</real>
 		</dict>
 		<key>SF-WCT</key>
 		<dict>
 			<key>xpos</key>
-			<real>300</real>
+			<real>300.0</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>15.0</real>
 		</dict>
 		<key>TEXTVIEW-MLB-STATS</key>
 		<dict>
 			<key>xpos</key>
-			<real>650</real>
+			<real>650.0</real>
 			<key>ypos</key>
-			<real>655</real>
+			<real>655.0</real>
 		</dict>
 		<key>TEXTVIEW-STATS</key>
 		<dict>
 			<key>xpos</key>
-			<real>650</real>
+			<real>650.0</real>
 			<key>ypos</key>
-			<real>330</real>
+			<real>330.0</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -2146,7 +2150,7 @@ Set a favourite team and adjust the refresh interval in the Workflow's Configura
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.4</string>
+	<string>1.0.5</string>
 	<key>webaddress</key>
 	<string>https://github.com/Syntax-P/Alfred-scoreboard</string>
 </dict>
