@@ -36,7 +36,7 @@ ALIASES = {
 }
 ALL_SLUGS = list(LEAGUES.keys())
 
-ESPN_SOCCER = "https://site.api.espn.com/apis/site/v2/sports/soccer"
+ESPN_SOCCER = "https://site.web.api.espn.com/apis/site/v2/sports/soccer"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 Safari/605.1.15"
 STATE_ICON  = {"pre":"🕐","in":"🔴","post":"✅"}
 STATE_ORDER = {"in":0,"pre":1,"post":2}
@@ -241,7 +241,7 @@ def next_fixtures_from_scoreboard(slug):
 
 def fetch_standings(slug):
     ln,li=LEAGUES[slug]; data=None; last_err=""
-    for url in [f"https://site.api.espn.com/apis/v2/sports/soccer/{slug}/standings",
+    for url in [f"https://site.web.api.espn.com/apis/v2/sports/soccer/{slug}/standings",
                 f"{ESPN_SOCCER}/{slug}/standings"]:
         try: data,_=fetch_json(url,f"standings_{slug}",STANDING_TTL); break
         except Exception as ex: last_err=str(ex)
@@ -291,7 +291,7 @@ def fetch_worldcup_standings():
 
     # Try to get standings data first to detect stage
     data = None
-    for url in [f"https://site.api.espn.com/apis/v2/sports/soccer/{slug}/standings",
+    for url in [f"https://site.web.api.espn.com/apis/v2/sports/soccer/{slug}/standings",
                 f"{ESPN_SOCCER}/{slug}/standings"]:
         try: data, _ = fetch_json(url, f"standings_{slug}", STANDING_TTL); break
         except: continue
